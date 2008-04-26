@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.6.1" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
+http://pear.php.net/dtd/tasks-1.0.xsd
+http://pear.php.net/dtd/package-2.0
+http://pear.php.net/dtd/package-2.0.xsd">
+ <name>HTML_QuickForm_CAPTCHA</name>
+ <channel>pear.php.net</channel>
+ <summary>Drop-in CAPTCHA element for QuickForm forms</summary>
+ <description>This package provides QuickForm interface to the Text_CAPTCHA package. It requires the use of a session to serialize a Text_CAPTCHA instance. Currently drivers for Image, Equation, Figlet and Word are included.
+ </description>
+ <lead>
+  <name>Philippe Jausions</name>
+  <user>jausions</user>
+  <email>jausions@php.net</email>
+  <active>yes</active>
+ </lead>
+ <date>2008-04-26</date>
+ <time>13:28:06</time>
+ <version>
+  <release>0.3.0</release>
+  <api>0.1.0</api>
+ </version>
+ <stability>
+  <release>beta</release>
+  <api>beta</api>
+ </stability>
+ <license uri="http://www.opensource.org/licenses/bsd-license.php">New BSD License</license>
+ <notes>
+ - Switch to New BSD license
+ - Fixed Image driver to not display superficious HTML attributes
+ - Upgrade to package.xml version 2.0
+ - Cosmetic code clean up
+ </notes>
+ <contents>
+  <dir name="/">
+   <dir name="HTML">
+    <dir name="QuickForm">
+     <file name="CAPTCHA.php" role="php">
+      <tasks:replace from="@package_version@" to="version" type="package-info" />
+     </file>
+     <dir name="CAPTCHA">
+      <file name="Equation.php" role="php">
+       <tasks:replace from="@package_version@" to="version" type="package-info" />
+      </file>
+      <file name="Figlet.php" role="php">
+       <tasks:replace from="@package_version@" to="version" type="package-info" />
+      </file>
+      <file name="Image.php" role="php">
+       <tasks:replace from="@package_version@" to="version" type="package-info" />
+      </file>
+      <file name="Word.php" role="php">
+       <tasks:replace from="@package_version@" to="version" type="package-info" />
+      </file>
+     </dir> <!-- /HTML/QuickForm/CAPTCHA -->
+     <dir name="Rule" role="php">
+      <file name="CAPTCHA.php" role="php">
+       <tasks:replace from="@package_version@" to="version" type="package-info" />
+      </file>
+     </dir> <!-- /HTML/QuickForm/Rule -->
+    </dir> <!-- /HTML/QuickForm -->
+   </dir> <!-- /HTML -->
+   <dir name="docs">
+     <file name="license.txt" role="doc" />
+     <dir name="examples">
+      <file name="qfcaptcha_form_equation.php" role="doc" />
+      <file name="qfcaptcha_form_figlet.php" role="doc" />
+      <file name="qfcaptcha_form_image.php" role="doc" />
+      <file name="qfcaptcha_form_random.php" role="doc" />
+      <file name="qfcaptcha_form_word.php" role="doc" />
+      <file name="qfcaptcha_image.php" role="doc" />
+     </dir> <!-- /docs/examples -->
+   </dir> <!-- /docs -->
+  </dir> <!-- / -->
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>4.3.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.7.1</min>
+   </pearinstaller>
+   <package>
+    <name>Text_CAPTCHA</name>
+    <channel>pear.php.net</channel>
+    <min>0.3.1</min>
+   </package>
+   <package>
+    <name>HTML_QuickForm</name>
+    <channel>pear.php.net</channel>
+    <min>3.2.7</min>
+   </package>
+  </required>
+ </dependencies>
+ <phprelease />
+ <changelog>
+  <release>
+   <version>
+    <release>0.3.0</release>
+    <api>0.1.0</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2008-04-26</date>
+   <license uri="http://www.opensource.org/licenses/bsd-license.php">New BSD License</license>
+   <notes>
+- Switch to New BSD license
+- Fixed Image driver to not display superfluous HTML attributes
+- Upgrade to package.xml version 2.0
+- Cosmetic code clean up
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.2.0</release>
+    <api>0.1.0</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2007-01-04</date>
+   <license uri="http://www.gnu.org/licenses/lgpl.html">LGPL</license>
+   <notes>Initial release.
+   </notes>
+  </release>
+ </changelog>
+</package>
