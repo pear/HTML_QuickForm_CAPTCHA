@@ -85,6 +85,37 @@ class HTML_QuickForm_CAPTCHA_Image extends HTML_QuickForm_CAPTCHA
     var $_CAPTCHA_driver = 'Image';
 
     /**
+     * php 5.3 fix Bug #18090
+     *
+     * @param string $elementName  Name
+     * @param mixed  $elementLabel Label for the CAPTCHA
+     * @param array  $options      Options for the Text_CAPTCHA package
+     * <ul>
+     *  <li>'sessionVar' (string)  name of session variable containing
+     *                             the Text_CAPTCHA instance (defaults to
+     *                             _HTML_QuickForm_CAPTCHA.)</li>
+     *  <li>Other options depend on the driver used</li>
+     * </ul>
+     * @param mixed  $attributes   HTML Attributes for the <a> tag surrounding
+     *                             the image. Can be a string or array.
+     *
+     * @return HTML_QuickForm_CAPTCHA_Image
+     */
+    function HTML_QuickForm_CAPTCHA_Image(
+        $elementName = null,
+        $elementLabel = null,
+        $options = null,
+        $attributes = null
+    ) {
+        parent::HTML_QuickForm_CAPTCHA(
+            $elementName,
+            $elementLabel,
+            $options,
+            $attributes
+        );
+    }
+
+    /**
      * Returns the HTML for the CAPTCHA image
      *
      * @return string
@@ -157,8 +188,11 @@ class HTML_QuickForm_CAPTCHA_Image extends HTML_QuickForm_CAPTCHA
  * Registers the class with QuickForm
  */
 if (class_exists('HTML_QuickForm')) {
-    HTML_QuickForm::registerElementType('CAPTCHA_Image',
-            'HTML/QuickForm/CAPTCHA/Image.php', 'HTML_QuickForm_CAPTCHA_Image');
+    HTML_QuickForm::registerElementType(
+        'CAPTCHA_Image',
+        'HTML/QuickForm/CAPTCHA/Image.php',
+        'HTML_QuickForm_CAPTCHA_Image'
+    );
 }
 
 ?>
