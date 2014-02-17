@@ -8,7 +8,7 @@
     ],
     "autoload": {
         "psr-0": {
-            "HTML_QuickForm_CAPTCHA": "./"
+            "HTML": "./"
         }
     },
     "description": "More info available on: http://pear.php.net/package/HTML_QuickForm_CAPTCHA",
@@ -23,7 +23,8 @@
     },
     "type": "library",
     "require": {
-        "pear/pear_exception": "*"
+        "pear/pear_exception": "*",
+        "pear/text_captcha": "*"
     },
     "require-dev": {
         "phpunit/phpunit": "*"
